@@ -35,14 +35,14 @@ Edit `setup.py` to control which libraries/configurations are built.
 
 You will need to hunt down and place the following files in the `archives` directory:
 
-- boost_1_55_0.7z
-- db-5.3.21.zip
-- ft246.zip
-- icu4c-52_1-src.zip
-- jpegsr8c.zip
-- lpng166.7z
-- openssl-1.0.1e.tar.gz
-- zlib127.zip
+- `boost_1_55_0.7z`
+- `db-5.3.21.zip`
+- `ft246.zip`
+- `icu4c-52_1-src.zip`
+- `jpegsr8c.zip`
+- `lpng166.7z`
+- `openssl-1.0.1e.tar.gz`
+- `zlib127.zip`
 
 You only need to do this for the libraries you actually want to build but keep in mind the following dependencies:
 - Boost (requires ICU, zlib)
@@ -50,6 +50,8 @@ You only need to do this for the libraries you actually want to build but keep i
 - libpng (requires zlib)
 
 Note: PoDoFo is actually fetched directly from its svn repo.
+
+All libraries are built to be statically linked and use the static C/C++ runtime library.
 
 Run `build.py` and if all goes well, you'll have a set of libraries ready to go. A complete rebuild of every library configuration takes about four hours on my 3Ghz Core i5 box running Windows 7 x64 with 8GB.
 
