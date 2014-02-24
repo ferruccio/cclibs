@@ -33,7 +33,7 @@ Setup
 -----
 Edit `setup.py` to control which libraries/configurations are built.
 
-You will need to hunt down and place the following files in the archives directory:
+You will need to hunt down and place the following files in the `archives` directory:
 
 - boost_1_55_0.7z
 - db-5.3.21.zip
@@ -47,6 +47,7 @@ You will need to hunt down and place the following files in the archives directo
 You only need to do this for the libraries you actually want to build but keep in mind the following dependencies:
 - Boost (requires ICU, zlib)
 - PoDoFo (requires FreeType, libjpeg, libpng, OpenSSL, zlib)
+- libpng (requires zlib)
 
 Note: PoDoFo is actually fetched directly from its svn repo.
 
