@@ -3,10 +3,10 @@
 # VS2010 -> VC++ 10.0
 # VS2012 -> VC++ 11.0
 # VS2013 -> VC++ 12.0
-VC_VERSION = '10.0'
+VC_VERSION = '12.0'
 
 # installation target
-INSTALL = 'C:\\cclibs-10.0'
+INSTALL = 'C:\\cclibs-12.0'
 
 # delete INSTALL target before build?
 CLEAN = True
@@ -28,14 +28,14 @@ BUILD_BOOST = True
 BUILD_PODOFO = True
 
 # PoDoFo SVN revision (use 'HEAD' to get latest)
-PODOFO_REV = 1579
+PODOFO_REV = 1649
 
 # configuration
 BUILD_DEBUG = True
 BUILD_RELEASE = True
 
 # platform
-BUILD_X86 = True
+BUILD_X86 = False
 BUILD_X64 = True
 
 # map dependency to archive file
