@@ -40,7 +40,7 @@ BUILD_X64 = True
 
 # map dependency to archive file
 ARCHIVES = {
-    'boost' : 'boost_1_55_0.7z',
+    'boost' : 'boost_1_56_0.7z',
     'bdb' : 'db-5.3.21.zip',
     'freetype' : 'ft246.zip',
     'icu' : 'icu4c-52_1-src.zip',
