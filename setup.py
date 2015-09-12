@@ -47,5 +47,5 @@ ARCHIVES = {
     'libjpeg' : 'jpegsr8c.zip',
     'libpng' : 'lpng166.7z',
     'openssl' : 'openssl-1.0.1e.tar.gz',
-    'zlib' : 'zlib127.zip'
+    'zlib' : 'zlib128.zip'
 }
