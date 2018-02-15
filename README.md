@@ -1,3 +1,5 @@
+Deprecated in favor of [vcpkg](https://github.com/Microsoft/vcpkg).
+
 cclibs
 ======
 
