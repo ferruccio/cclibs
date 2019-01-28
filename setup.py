@@ -28,6 +28,7 @@ BUILD_BOOST = True
 BUILD_PODOFO = True
 
 # PoDoFo SVN revision (use 'HEAD' to get latest)
+PODOFO_SVN = "https://svn.code.sf.net/p/podofo/code/podofo/trunk"
 PODOFO_REV = 1678
 
 # configuration
@@ -46,6 +47,6 @@ ARCHIVES = {
     'icu' : 'icu4c-55_1-src.zip',
     'libjpeg' : 'jpegsr8c.zip',
     'libpng' : 'lpng166.7z',
-    'openssl' : 'openssl-1.0.1e.tar.gz',
+    'openssl' : 'openssl-1.1.0f-vs2013.7z',
     'zlib' : 'zlib128.zip'
 }

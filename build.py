@@ -145,38 +145,16 @@ def libpng(bat):
 
 def OpenSSL(bat):
     if bat.build:
-        tools.kill('openssl') #needs a fresh start
         tools.extract('openssl')
-        bat.command('cd openssl\\openssl*')
-
-        if bat.platform == 'x86':
-            bat.command('perl Configure VC-WIN32 --prefix={0}\\x86'.format(setup.INSTALL))
-            if bat.config == 'debug':
-                bat.command('sed -i "s/mk1mf.pl/mk1mf.pl debug/g" ms\\do_ms.bat')
-            bat.command('call ms\\do_ms.bat')
-        else:
-            bat.command('perl Configure VC-WIN64A --prefix={0}\\x64'.format(setup.INSTALL))
-            if bat.config == 'debug':
-                bat.command('sed -i "s/mk1mf.pl/mk1mf.pl debug/g" ms\\do_win64a.bat')
-            bat.command('call ms\\do_win64a.bat')
-        bat.command('nmake -f ms\\nt.mak')
-        bat.command('nmake -f ms\\nt.mak install')
     else:
-        if bat.config == 'debug':
-            bat.validate('Copying: out32.dbg/libeay32.lib')
-            bat.command('pushd {0}\\{1}\\lib'.format(setup.INSTALL, bat.platform))
-            bat.command('ren libeay32.lib libeay32d.lib')
-            bat.command('ren ssleay32.lib ssleay32d.lib')
-            bat.command('popd')
-            bat.command('cd openssl\\openssl*')
-            bat.command('copy /y tmp32.dbg\\lib.pdb {0}\\{1}\\lib'.format(setup.INSTALL, bat.platform))
-        else:
-            bat.validate('Copying: out32/libeay32.lib')
+        bat.include('openssl\\include64')
+        bat.lib('openssl\\lib64')
+        bat.bin('openssl\\bin64')
 
 def PoDoFo(bat):
     if bat.build:
         if not os.path.isdir('podofo'):
-            os.system('svn export -r {0} https://svn.code.sf.net/p/podofo/code/podofo/trunk podofo >scripts\\svn-export.log'.format(setup.PODOFO_REV))
+            os.system('svn export -r {0} {1} podofo >scripts\\svn-export.log'.format(setup.PODOFO_REV, setup.PODOFO_SVN))
         bat.command('cd podofo')
         bat.cmake({
             'target': 'podofo_static',

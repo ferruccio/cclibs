@@ -1,4 +1,4 @@
-Deprecated in favor of [vcpkg](https://github.com/Microsoft/vcpkg).
+Don't use this. Use something like [vcpkg](https://github.com/Microsoft/vcpkg) instead.
 
 cclibs
 ======
@@ -23,6 +23,7 @@ Requirements
 ------------
 
 - Visual C++ (tested with VS2010, VS2012 & VS2013)
+- .NET Framework 3.5
 - Python3 (tested with 3.3)
 - Perl (OpenSSL only)
 - CMake
@@ -43,7 +44,7 @@ You will need to hunt down and place the following files in the `archives` direc
 - `icu4c-55_1-src.zip`
 - `jpegsr8c.zip`
 - `lpng166.7z`
-- `openssl-1.0.1e.tar.gz`
+- `openssl-1.1.0f-vs2013.7z`
 - `zlib127.zip`
 
 You only need to do this for the libraries you actually want to build but keep in mind the following dependencies:
