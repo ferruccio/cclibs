@@ -158,7 +158,8 @@ def PoDoFo(bat):
         bat.command('cd podofo')
         bat.cmake({
             'target': 'podofo_static',
-            'params': '-DLIBCRYPTO_LIBRARY_NAMES=libeay32{0}'.format('d' if bat.config == 'debug' else ''),
+            'params': '-DLIBCRYPTO_LIBRARY_NAMES=libcryptoMT{0} -DPODOFO_BUILD_STATIC:TYPE=BOOL=ON'
+                .format('d' if bat.config == 'debug' else ''),
         })
     else:
         bat.validate_cmake()
