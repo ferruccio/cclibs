@@ -6,7 +6,7 @@
 VC_VERSION = '12.0'
 
 # installation target
-INSTALL = 'C:\\cclibs-12.0'
+INSTALL = 'C:\\cclibs'
 
 # delete INSTALL target before build?
 CLEAN = True
@@ -41,7 +41,7 @@ BUILD_X64 = True
 
 # map dependency to archive file
 ARCHIVES = {
-    'boost' : 'boost_1_59_0.7z',
+    'boost' : 'boost_1_69_0.7z',
     'bdb' : 'db-5.3.21.zip',
     'freetype' : 'ft246.zip',
     'icu' : 'icu4c-55_1-src.zip',
