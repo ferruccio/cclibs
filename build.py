@@ -166,10 +166,10 @@ def PoDoFo(bat):
         bat.include('podofo\\src\\*.h', '\\podofo')
         bat.include('podofo\\podofo_config.h', '\\podofo')
         if bat.config == 'debug':
-            bat.command("copy /y podofo\\src\\podofo.lib podofo\\src\\podofod.lib")
-            bat.lib("podofo\\src\\podofod.lib")
+            bat.command("copy /y podofo\\src\\podofo\\podofo.lib podofo\\src\\podofo\\podofod.lib")
+            bat.lib("podofo\\src\\podofo\\podofod.lib")
         else:
-            bat.lib("podofo\\src\\podofo.lib")
+            bat.lib("podofo\\src\\podofo\\podofo.lib")
 
 def need(program):
     (out, err) = Popen(['where', program], stdout=PIPE, shell=True).communicate()

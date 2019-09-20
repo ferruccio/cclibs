@@ -29,7 +29,7 @@ BUILD_PODOFO = True
 
 # PoDoFo SVN revision (use 'HEAD' to get latest)
 PODOFO_SVN = "https://svn.code.sf.net/p/podofo/code/podofo/trunk"
-PODOFO_REV = 1930
+PODOFO_REV = 1998
 
 # configuration
 BUILD_DEBUG = True

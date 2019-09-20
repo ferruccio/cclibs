@@ -1,0 +1,12 @@
+__pycache__
+archives
+freetype
+libjpeg
+libpng
+openssl
+podofo
+scripts
+zlib
+bdb
+boost
+icu
