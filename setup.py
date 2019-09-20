@@ -23,6 +23,7 @@ BUILD_BDB = True
 
 # build Boost
 BUILD_BOOST = True
+BOOST_INCLUDE = 'boost-1_69'
 
 # build PoDoFo and all its dependencies
 BUILD_PODOFO = True

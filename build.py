@@ -91,7 +91,7 @@ def Boost(bat):
         bat.command('b2 -a {0} install'.format(param(bat.config, bat.platform)))
 
 def clean_boost(platform):
-    tools.rename('{0}\\{1}\\include\\boost-1_69\\boost'.format(setup.INSTALL, platform),
+    tools.rename('{0}\\{1}\\include\\{2}\\boost'.format(setup.INSTALL, platform, setup.BOOST_INCLUDE),
                  '{0}\\{1}\\include\\boost'.format(setup.INSTALL, platform))
 
 def FreeType(bat):
